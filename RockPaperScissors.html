@@ -6,9 +6,57 @@
 </head>
 <body>
     <script>
+      
+      let winner = "";
+      
+      // Function to get a random number between 1 and 3 for the computer's choice
+      function computerPlay(){
+        var computerChoice = "";
+        var random = Math.floor(Math.random() * 3) + 1;
+        
+        if(random == 1){
+          computerChoice = "Rock";
+        } 
+        else if(random == 2){
+          computerChoice = "Paper";
+        }
+        else{
+          computerChoice = "Scissors";
+        }
+
+        return computerChoice;
+      }
+
+      // Function to play a round of Rock Paper Scissors
+      function playGame(playerSelection, computerSelection){
+        let player = playerSelection;
+        let computer = computerSelection;
+        let playerScore = 0;
+        let computerScore = 0;
+        let i;
+        
+        for (i = 1; i <=5; i++)
+        {
+          if(player == "rock" && computer == "Rock"){
+            winner = "Tie";
+            console.log(winner);
+          }
+          else if(player == "rock" && computer == "Rock"){
+            winner = "Tie";
+            console.log(winner);
+          }
+          else if(player == "rock" && computer == "Rock"){
+            winner = "Tie";
+            console.log(winner);
+          }
+        }
+
+        return winner;
+      }
+      
+      //calling the playGame() function to start the game
+      playGame(computerPlay, prompt("Please enter Rock, Paper, or Scissors"));
+      console.log(winner);
     </script>
-
-
-
 </body>
 </html>
